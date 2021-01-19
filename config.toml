@@ -1,4 +1,8 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Stick Of Butter"
 theme = "base"
+[params]
+    tbsps = ["1","2","3","4","5","6","7","8"]
+    quartercup = "4 TABLESPOONS IS EQUAL TO 1/4 CUP"
+    faces = ["front", "top", "back", "bottom"]

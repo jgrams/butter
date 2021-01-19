@@ -1,4 +1,70 @@
+:root {
+    --butter: lightgoldenrodyellow;
+    --text: red;
+    --accent: #B284BE;
+    --background: rgb(192, 192, 188); 
+  }
+
 body {
-    background: pink;
-    font-size: 20px;
+    background:var(--background);
+    font-size: 26px;
+}
+
+.tc {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.butter {
+    background-color: var(--butter);
+}
+
+.butterText {
+    font-size: 4rem;
+}
+
+.smalltext {
+    font-size: .75rem;
+    margin-top: .25rem;
+}
+
+.butterjar {
+    margin: auto;
+    width: 75%;
+    height: 25%;
+    max-width: 48rem;
+    max-height: 48rem;
+}
+
+.text {
+    color:var(--text)
+}
+
+.invisible {
+   display: none !important; 
+}
+
+.arrow {
+    max-width: 2rem;
+    margin: auto;
+}
+
+.arrowPath {
+    fill: var(--accent);
+    stroke: black;
+    stroke-width: .3rem;
+}
+
+.arrowPath:hover {
+    stroke-width: .6rem;
 }

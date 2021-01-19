@@ -1,0 +1,19 @@
+<div id="jar" class="butterjar text">
+    <div id="up" class="arrow">{{ partial "uparrow.svg" }}</div>
+    <div id="front" class="front visible flexcolumn butter">
+        {{ partial "twoface.html" . }}
+    </div>
+    <div id="bottom" class="invisible measurement tc butter">
+        {{ range .Site.Params.tbsps }}
+            <div class="tbsp tbsp{{.}}"><b> {{.}} TBSP </b></div>
+        {{ end }}
+        <div class="quartercup1 cups smalltext"><b>{{ .Site.Params.quartercup }}</b></div>
+        <div class="quartercup2 cups smalltext"><b>{{ .Site.Params.quartercup }}</b></div>
+        <div class="thirdcup cups smalltext"><b>1/3 CUP</b></div>
+        <div class="tc text smalltext"><b>THIS UNIT IS NOT LABELED FOR INDIVIDUAL RETAIL</b></div>
+    </div>
+    <div id="back" class="invisible flexcolumn butter">
+        {{ partial "twoface.html" . }}
+    </div>
+    <div id="down" class="arrow">{{ partial "downarrow.svg" }}</div>  
+</div>

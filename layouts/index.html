@@ -1,0 +1,5 @@
+{{- define "main" }}
+    <h1 class="invisible">{{ .Title }}</h1>
+    {{ partial "butter.html" . }}
+    {{ .Content }}
+{{- end }}  
