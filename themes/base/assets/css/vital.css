@@ -55,8 +55,8 @@ body {
 }
 
 .arrow {
-    max-width: 2rem;
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .arrowPath {

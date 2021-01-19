@@ -1,0 +1,7 @@
+<div class="arrow" id="{{ . }}">
+    {{ $image := resources.Get (print . "arrow.svg")}}
+    {{ $image.Content | safeHTML }}
+</div>
+<script>
+    document.getElementById("{{ . }}").onclick=function(){rotate("{{ . }}")};
+</script>

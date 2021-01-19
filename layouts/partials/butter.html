@@ -1,6 +1,6 @@
 <div id="jar" class="butterjar text">
-    <div id="up" class="arrow">{{ partial "uparrow.svg" }}</div>
-    <div id="front" class="front visible flexcolumn butter">
+    {{ partial "arrow.html" "up"}}
+    <div id="front visible" class="front visible flexcolumn butter">
         {{ partial "twoface.html" . }}
     </div>
     <div id="bottom" class="invisible measurement tc butter">
@@ -15,5 +15,11 @@
     <div id="back" class="invisible flexcolumn butter">
         {{ partial "twoface.html" . }}
     </div>
-    <div id="down" class="arrow">{{ partial "downarrow.svg" }}</div>  
+    {{ partial "arrow.html" "down"}}
 </div>
+<script>
+    const faces = Array["front", "top", "back", "bottom"];
+    function rotate(direction) {
+        alert(direction)
+    }
+</script>
