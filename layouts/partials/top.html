@@ -1,0 +1,33 @@
+<canvas id="topImage" width="452px" height="114px">
+    This butter needs CSS canvas.
+</canvas>
+<script>
+    var c = document.getElementById("topImage");
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = '#50504c';
+    ctx.shadowColor = 'lightgrey';
+    ctx.shadowBlur = 2;
+    ctx.beginPath();
+    ctx.shadowOffsetX = -2;
+    ctx.moveTo(0,1);
+    ctx.lineTo(19,56);
+    ctx.lineTo(23,56);
+    ctx.lineTo(0,114);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 2;
+    ctx.moveTo(23,56);
+    ctx.lineTo(430,59);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.shadowOffsetY = 0;
+    ctx.shadowOffsetX = 2;
+    ctx.moveTo(452,2);
+    ctx.lineTo(430,59);
+    ctx.moveTo(452,114);
+    ctx.lineTo(426,59);
+    ctx.moveTo(0,114);
+    ctx.lineTo(23,56);
+    ctx.stroke();
+</script>

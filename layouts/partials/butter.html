@@ -1,25 +1,62 @@
-<div id="jar" class="butterjar text">
+<div id="jar" class="butterjar jar text">
     {{ partial "arrow.html" "up"}}
-    <div id="front visible" class="front visible flexcolumn butter">
+    <div id="front" class="front horizontal-face visible flexcolumn butter">
         {{ partial "twoface.html" . }}
     </div>
-    <div id="bottom" class="invisible measurement tc butter">
+    <div id="bottom" class="invisible vertical-face measurement tc butter bold">
         {{ range .Site.Params.tbsps }}
-            <div class="tbsp tbsp{{.}}"><b> {{.}} TBSP </b></div>
+            <div class="tbsp tbsp{{.}}"> {{.}} TBSP </div>
         {{ end }}
-        <div class="quartercup1 cups smalltext"><b>{{ .Site.Params.quartercup }}</b></div>
-        <div class="quartercup2 cups smalltext"><b>{{ .Site.Params.quartercup }}</b></div>
-        <div class="thirdcup cups smalltext"><b>1/3 CUP</b></div>
-        <div class="tc text smalltext"><b>THIS UNIT IS NOT LABELED FOR INDIVIDUAL RETAIL</b></div>
+        <div class="quartercup1 cups smalltext">{{ .Site.Params.quartercup }}</div>
+        <div class="quartercup2 cups smalltext">{{ .Site.Params.quartercup }}</div>
+        <div class="thirdcup cups smalltext">1/3 CUP</div>
+        <div class="tc jar text sliceTop sliverBottom smalltext">THIS UNIT IS NOT LABELED FOR INDIVIDUAL RETAIL</div>
     </div>
-    <div id="back" class="invisible flexcolumn butter">
+    <div id="back" class="invisible back horizontal-face flexcolumn butter">
         {{ partial "twoface.html" . }}
+    </div>
+    <div id="top" class="invisible vertical-face flexcolumn butter">
+        {{ partial "top.html" . }}
     </div>
     {{ partial "arrow.html" "down"}}
 </div>
 <script>
-    const faces = Array["front", "top", "back", "bottom"];
+    const faces = ["front", "top", "back", "bottom"];
+    var currentFaceIndex = 0;
+    function add(a, b) {
+        return a + b;
+    }
+
+    function subtract(a, b) {
+        return a - b;
+    }
+
+    function makeVisible(element) {
+        element.classList.replace("visible", "invisible")
+    }
+
+    function makeInvisible(element) {
+        element.classList.replace("invisible", "visible")
+    }
+
     function rotate(direction) {
-        alert(direction)
+        var visibleFace = document.getElementById(faces[currentFaceIndex]);
+        if (direction == "up") {
+            currentFaceIndex = findFace(add);
+        } else {
+            currentFaceIndex = findFace(subtract);
+        }
+        makeVisible(visibleFace);
+        makeInvisible(document.getElementById(faces[currentFaceIndex]));
+    }
+
+    function findFace(operation) {
+        var newIndex = operation(currentFaceIndex, 1);
+        if (newIndex >= faces.length) {
+            newIndex = 0;
+        } else if (newIndex < 0) {
+            newIndex = subtract(faces.length, 1);
+        }
+        return newIndex;
     }
 </script>
