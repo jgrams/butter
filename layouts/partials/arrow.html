@@ -4,4 +4,9 @@
 </div>
 <script>
     document.getElementById("{{ . }}").onclick=function(){rotate("{{ . }}")};
+    document.getElementById("{{ . }}").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        rotate("{{ . }}");
+    }
+});
 </script>
