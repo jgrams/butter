@@ -1,4 +1,4 @@
-<div class="arrow" id="{{ . }}">
+<div class="arrow" tabindex="0" id="{{ . }}">
     {{ $image := resources.Get (print . "arrow.svg")}}
     {{ $image.Content | safeHTML }}
 </div>
