@@ -42,12 +42,20 @@ body {
     align-items: center;
 }
 
+.font-m {
+    font-size: 3vw;
+}
+
 .font-l {
-    font-size: 3rem;
+    font-size: 4vw;
 }
 
 .font-xl {
-    font-size: 5rem;
+    font-size: 5vw;
+}
+
+.font-xxl {
+    font-size: 7vw;
 }
 
 .butter {
@@ -210,6 +218,8 @@ body {
 }
 
 .sign {
+    font-family: sans-serif;
+    font-weight: bold;
     color: var(--signtext);
     background-color: var(--sign);
     display: grid;
@@ -294,5 +304,5 @@ body {
 }
 
 .route svg {
-    height: 10rem;
+    height: 13vw;
 }
