@@ -1,7 +1,9 @@
 baseURL = "https://cssthings.com/"
 languageCode = "en-us"
-title = "Stick Of Butter"
+title = "Nice Things, On The Internet"
 theme = "base"
 [params]
     tbsps = ["1","2","3","4","5","6","7","8"]
     quartercup = "4 TABLESPOONS IS EQUAL TO 1/4 CUP"
+    description = "This page loads in one request with no images, and it delivers customizeable butter and reminiscant travel."
+    images = ["image.png"]

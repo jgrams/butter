@@ -1,22 +1,27 @@
 <div class="sign" contenteditable="true">
     <div class="empty"></div>
-    <div class="exit flex hat">
-        <div class="exit-text">EXIT</div>
-        <div class="flex number justify-around">
+    <div class="exit flex hat littlehat">
+        <div class="exit-text font-l">EXIT</div>
+        <div class="flex font-xl justify-around">
             <div>1</div>
             <div>C</div>
         </div>
     </div>
-    <div class="directions hat hard-corner-hat">
+    <div class="directions hat bighat">
         <div class="interstate flex full-center">
-            <div class="header">INTERSTATE</div>
-            <div class="number">43</div>
+            <div class="route">
+                {{ $image := resources.Get "sign/interstate.svg" }}
+                {{ $image.Content | safeHTML }}
+            </div>
         </div>
-        <div class="cardinal flex full-center">NORTH</div>
-        <div class="destination flex full-center">Green Bay</div>
-        <div class="arrow">arrowtbd</div>
+        <div class="cardinal flex full-center font-l">NORTH</div>
+        <div class="destination flex full-center font-xl">Green Bay</div>
+        <div class="arrow flex full-center">
+            {{ $image := resources.Get "sign/arrow.svg" }}
+            {{ $image.Content | safeHTML }}
+        </div>
     </div>
-    <div class="speed">
+    <div class="speed font-l">
         40 MPH
     </div>
 </div>
