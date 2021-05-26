@@ -92,6 +92,10 @@ body {
     justify-content: center;
 }
 
+.arrow svg {
+    width: 7vw;
+}
+
 .arrowPath {
     fill: var(--accent);
     stroke: black;
@@ -245,9 +249,9 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas:
     "number cardinal ."
-    "number cardinal arrow"
-    "number . arrow"
-    "destination destination arrow"
+    "number cardinal turn"
+    "number . turn"
+    "destination destination turn"
     "destination destination .";
 }
 
@@ -268,8 +272,8 @@ body {
     grid-area: destination;
 }
 
-.arrow {
-    grid-area: arrow;
+.turn {
+    grid-area: turn;
 }
 
 .exit {
