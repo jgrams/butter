@@ -1,27 +1,29 @@
-<div class="sign" contenteditable="true">
-    <div class="empty"></div>
-    <div class="exit flex hat littlehat">
-        <div class="exit-text font-m">EXIT</div>
-        <div class="flex font-xl justify-around">
-            <div>1</div>
-            <div>C</div>
+<div class="jar">
+    <div class="sign" contenteditable="true">
+        <div class="empty"></div>
+        <div class="exit flex hat littlehat">
+            <div class="exit-text font-m">EXIT</div>
+            <div class="flex font-xl justify-around">
+                <div>1</div>
+                <div>C</div>
+            </div>
         </div>
-    </div>
-    <div class="directions hat bighat">
-        <div class="interstate flex full-center">
-            <div class="route">
-                {{ $image := resources.Get "sign/interstate.svg" }}
+        <div class="directions hat bighat">
+            <div class="interstate flex full-center">
+                <div class="route">
+                    {{ $image := resources.Get "sign/interstate.svg" }}
+                    {{ $image.Content | safeHTML }}
+                </div>
+            </div>
+            <div class="cardinal flex full-center font-xl">NORTH</div>
+            <div class="destination flex full-center font-xxl">Green Bay</div>
+            <div class="arrow flex full-center">
+                {{ $image := resources.Get "sign/arrow.svg" }}
                 {{ $image.Content | safeHTML }}
             </div>
         </div>
-        <div class="cardinal flex full-center font-xl">NORTH</div>
-        <div class="destination flex full-center font-xxl">Green Bay</div>
-        <div class="arrow flex full-center">
-            {{ $image := resources.Get "sign/arrow.svg" }}
-            {{ $image.Content | safeHTML }}
+        <div class="speed font-l">
+            40 MPH
         </div>
-    </div>
-    <div class="speed font-l">
-        40 MPH
     </div>
 </div>
