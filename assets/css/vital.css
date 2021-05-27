@@ -50,6 +50,10 @@ body {
     font-size: 2vw;
 }
 
+.font-ms {
+    font-size: 2.5vw;
+}
+
 .font-m {
     font-size: 3vw;
 }
@@ -72,7 +76,7 @@ body {
 
 .butter {
     background-color: var(--butter);
-    outline: .03rem solid var(--blendBorder);
+    outline: .1vw solid var(--blendBorder);
 }
 
 .smalltext {
@@ -87,31 +91,28 @@ body {
    display: none !important;
 }
 
-.arrow {
-    display: flex;
-    justify-content: center;
-}
-
 .arrow svg {
-    width: 7vw;
+    width: 8vw;
+    max-height: 10vw;
+    margin: auto;
 }
 
 .arrowPath {
     fill: var(--accent);
     stroke: black;
-    stroke-width: .3rem;
+    stroke-width: .1vw;
 }
 
 .arrowPath:hover {
-    stroke-width: .6rem;
+    stroke-width: .3vw;
 }
 
 .sliverTop {
-    margin-top: .125rem;
+    margin-top: 1vw;
 }
 
 .sliverBottom {
-    margin-bottom: .125rem;
+    margin-bottom: 1vw;
 }
 
 .sliceTop {
@@ -140,14 +141,14 @@ body {
     grid-row: 1/5;
     writing-mode: tb;
     padding-right: 36%;
-    border-top: .15rem solid;
-    border-bottom: .15rem solid;
-    border-right: .15rem solid;
+    border-top: .5vw solid;
+    border-bottom: .5vw solid;
+    border-right: .5vw solid;
 }
 
 .tbsp1 {
     grid-column: 1/2;
-    border-left: .15rem solid;
+    border-left: .5vw solid;
 }
 
 .tbsp2 {
@@ -230,7 +231,8 @@ body {
     color: var(--signtext);
     background-color: var(--sign);
     display: grid;
-    max-width: 80%;
+    width: 75vw;
+    max-height: 80vh;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(6, minmax(0, 1fr));
     grid-template-areas:
@@ -281,23 +283,19 @@ body {
     align-items: center;
 }
 
-.number {
-    font-size: 5rem;
-}
-
 .hat {
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 2vw 2vw 0 0;
 }
 
 .littlehat {
-    border: .4rem solid var(--signtext);
+    border: .5vw solid var(--signtext);
     border-bottom: none;
 }
 
 .bighat {
-    border: .6rem solid var(--signtext);
+    border: 1vw solid var(--signtext);
     border-bottom: none;
-    border-radius: 1rem 0 0 0;
+    border-radius: 3vw 0 0 0;
 }
 
 .speed {
