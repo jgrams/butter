@@ -100,11 +100,11 @@ body {
 .arrowPath {
     fill: var(--accent);
     stroke: black;
-    stroke-width: .1vw;
+    stroke-width: .3vw;
 }
 
 .arrowPath:hover {
-    stroke-width: .3vw;
+    stroke-width: .6vw;
 }
 
 .sliverTop {
