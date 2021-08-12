@@ -1,9 +1,9 @@
 <div id="jar" class="jar text">
     {{ partial "arrow.html" "up"}}
-        <div contenteditable='true' id="front" class="front horizontal-face visible flexcolumn butter">
+        <div contenteditable='true' spellcheck="false" id="front" class="front horizontal-face visible flexcolumn butter">
             {{ partial "twoface.html" . }}
         </div>
-        <div contenteditable='true' id="bottom" class="font-s invisible vertical-face measurement tc butter bold">
+        <div contenteditable='true' spellcheck="false" id="bottom" class="font-s invisible vertical-face measurement tc butter bold">
             {{ range .Site.Params.tbsps }}
                 <div class="tbsp font-ms tbsp{{.}}"> {{.}} TBSP </div>
             {{ end }}
@@ -12,10 +12,10 @@
             <div class="thirdcup cups smalltext">1/3 CUP</div>
             <div class="tc retail text sliceTop sliverBottom smalltext font-ms">THIS UNIT IS NOT LABELED FOR INDIVIDUAL RETAIL</div>
         </div>
-        <div contenteditable='true' id="back" class="invisible back horizontal-face flexcolumn butter">
+        <div contenteditable='true' spellcheck="false" id="back" class="invisible back horizontal-face flexcolumn butter">
             {{ partial "twoface.html" . }}
         </div>
-        <div contenteditable='true' id="top" class="invisible vertical-face flexcolumn butter">
+        <div contenteditable='true' spellcheck="false" id="top" class="invisible vertical-face flexcolumn butter">
             {{ partial "top.html" . }}
         </div>
     {{ partial "arrow.html" "down"}}
