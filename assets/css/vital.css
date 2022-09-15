@@ -310,3 +310,17 @@ body {
 .route svg {
     height: 13vw;
 }
+
+.canvas {
+    background-color: #d3d3d0;
+    width: 88vw;
+    height: 47.8vw;
+    padding: .5vw;
+}
+
+.painting-grid {
+    display: grid;
+    grid-template-columns: repeat(32, minmax(0, 1fr));
+    grid-template-rows: repeat(32, minmax(0, 1fr));
+    grid-gap: .14vw;
+}

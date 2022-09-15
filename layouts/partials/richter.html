@@ -1,0 +1,32 @@
+<div class="jar">
+    <div class="canvas painting-grid" id="richter-painting-canvas"></div>
+</div>
+<script>
+    function setColor(element) {
+        element.setAttribute("style", createBackgroundColorString());
+    };
+
+    function createRgbNumber() {
+        return Math.floor(Math.random() * 256);
+    }
+
+    function createBackgroundColorString() {
+        let r = createRgbNumber();
+        let g = createRgbNumber();
+        let b = createRgbNumber();
+        return `background-color:rgb(${r} ${g} ${b});`
+    }
+
+    function addColorBlock(element) {
+        let block = document.createElement("div");
+        setColor(block);
+        block.addEventListener('click', function(e) {
+            setColor(e.target);
+        });
+        element.appendChild(block);
+    };
+
+    const range = [...Array(1024).keys()];
+    const canvas = document.getElementById("richter-painting-canvas");
+    range.forEach(e => addColorBlock(canvas));
+</script>
